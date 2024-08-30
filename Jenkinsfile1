@@ -1,0 +1,13 @@
+pipeline {
+    agent any
+    stages {
+        stage("TASK1") {
+            when {
+                changeset 'file2.txt'
+            }
+            steps {
+                sh 'cat file2.txt'
+            }
+        }
+    }
+}
