@@ -5,7 +5,9 @@ pipeline {
             when {
                 changelog '.*test.*'
             }
-            sh 'cat file1.txt'
+            steps {
+                sh 'cat file1.txt'
+            }
         }
     }
 }
